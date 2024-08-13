@@ -9,6 +9,16 @@ function ProductList() {
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const [addedToCart, setAddedToCart] = useState({});
     const [cartTotal, setCartTotal] = useState(0);
+    const handleAddedToCart = (e, plant) => {
+        e.target.innerText = "Added to cart";
+        e.target.disabled = true;
+        setCartTotal(cartTotal + 1);
+        dispatch(addItem(plant));
+        setAddedToCart((prevState) => ({
+            ...prevState,
+            [plant.name]: true,
+        }));
+    };
 
     const plantsArray = [
         {
