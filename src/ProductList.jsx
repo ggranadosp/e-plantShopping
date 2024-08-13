@@ -317,11 +317,12 @@ function ProductList() {
                 </div>
             ) : (
                 <>
-                console.log("Pasando updateCartTotal a CartItem:", setCartTotal);
+                
                 <CartItem
                     onContinueShopping={handleContinueShopping}
                     updateCartTotal={setCartTotal}
-                    cartTotalState={[cartTotal, setCartTotal]} // Pasa setCartTotal como updateCartTotal/>
+                    cartTotalState={[cartTotal, setCartTotal]}
+                    setAddedToCart={setAddedToCart}// Pasa setCartTotal como updateCartTotal/>
                 />
                 </>
             )}
