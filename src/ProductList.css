@@ -110,6 +110,10 @@ body {
 .product-button:hover {
     background-color: #c0392b;
 }
+.product-button.added-to-cart {
+    background-color: grey; /* Gris cuando el producto se ha añadido */
+}
+
 
 /* Pseudo-elements - Sale badge */
 .product-card::before {
